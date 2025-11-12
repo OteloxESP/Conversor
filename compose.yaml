@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    restart: unless-stopped
+    networks:
+      - appnet
+    ports:
+      - "4000:4000"  # FastAPI (uvicorn) exposed on host:4000
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: unless-stopped
+    init: true
+    networks:
+      - appnet
+    depends_on:
+      - backend
+    ports:
+      - "5173:80"  # Nginx serves built app on port 80 inside container
+
+networks:
+  appnet:
+    driver: bridge

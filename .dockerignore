@@ -1,0 +1,66 @@
+# Version control
+.git/
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+
+# Node.js
+/frontend/node_modules/
+npm-debug.log
+yarn-debug.log
+
+# Build outputs
+/frontend/dist/
+/frontend/build/
+/frontend/out/
+
+# IDE/editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test and debug artifacts
+test/
+tests/
+debug/
+*.log
+
+# Environment and secrets
+.env*
+*.env
+*.pem
+*.key
+*.crt
+config.local.*
+*.local.yml
+
+# Documentation
+README*
+*.md
+docs/
+
+# Temporary files and folders
+tmp/
+temp/
+*.tmp
+.local/
+local/
+
+# Miscellaneous
+.svn/
+.hg/
+
+# Project-specific: skip Docker files (do NOT ignore Dockerfile or docker-compose files)
+# (No Dockerfile or docker-compose files detected in project root)
+
+# Exclude frontend lock files from ignore (as per instructions)
+# (package-lock.json is NOT ignored)
+
+# Exclude build config files (tsconfig.json, vite.config.ts, etc.)
+# (Not ignored)
